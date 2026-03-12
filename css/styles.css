@@ -3,24 +3,6 @@
    Modern, conversion-focused home service website
    ============================================================ */
 
-@font-face {
-  font-family: 'Inter';
-  src: url('../fonts/Inter-VariableFont_opsz,wght.woff2') format('woff2');
-  font-weight: 100 900;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Inter';
-  src: url('../fonts/Inter-Italic-VariableFont_opsz,wght.woff2') format('woff2');
-  font-weight: 100 900;
-  font-style: italic;
-  font-display: swap;
-}
-
-/* then keep your existing :root with --font-main: 'Inter', ... */
-
 /* ============ CSS VARIABLES ============ */
 :root {
   --color-primary: #0A1628;
@@ -757,7 +739,7 @@ body.menu-open .alert-bar {
 /* ============ HOME HERO ============ */
 .hero {
   background: linear-gradient(140deg, #060F1E 0%, #0A1628 40%, #0D2B5E 100%);
-  background-image: url('../images/house-hero-image.avif');
+  background-image: url('../images/slanted-house.avif');
   background-size: cover;
   background-position: center;
   color: white;
