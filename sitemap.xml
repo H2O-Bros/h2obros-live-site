@@ -31,6 +31,10 @@
   <loc>https://h2obros.com/contact</loc>
   <priority>0.80</priority>
 </url>
+<url>
+  <loc>https://h2obros.com/privacy-policy</loc>
+  <priority>0.30</priority>
+</url>
 
 
 </urlset>
