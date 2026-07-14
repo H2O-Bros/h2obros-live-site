@@ -60,6 +60,33 @@
       padding: .25rem .625rem;
       border-radius: var(--radius-full);
     }
+
+    /* SMS consent (A2P 10DLC opt-in) */
+    .sms-consent { margin: .25rem 0 1.125rem; }
+    .sms-consent-label {
+      display: flex;
+      gap: .625rem;
+      align-items: flex-start;
+      font-size: .8125rem;
+      line-height: 1.5;
+      color: var(--color-text-muted);
+      cursor: pointer;
+    }
+    .sms-consent-label input {
+      margin-top: .15rem;
+      flex: 0 0 auto;
+      width: 1.05rem;
+      height: 1.05rem;
+      accent-color: var(--color-accent);
+    }
+    .sms-consent-label a { color: var(--color-accent); font-weight: 600; }
+    .sms-consent-note {
+      font-size: .78125rem;
+      line-height: 1.5;
+      color: var(--color-text-muted);
+      opacity: .8;
+      margin: .45rem 0 0 1.675rem;
+    }
   </style>
 </head>
 
@@ -224,6 +251,21 @@
                       <textarea class="form-input form-input--light" id="ct-message" name="message" rows="5"
                         placeholder="Tell us about your property, what surfaces need cleaning, any special considerations…"></textarea>
                     </div>
+                  </div>
+                  <div class="sms-consent">
+                    <label class="sms-consent-label" for="ct-sms-consent">
+                      <input type="checkbox" id="ct-sms-consent" name="sms_consent" value="Yes — agreed to receive texts">
+                      <span>I agree to receive text messages from <strong>H2O Bros, LLC</strong>, including service
+                        messages about my quote and job (appointment confirmations and reminders, &ldquo;on my
+                        way&rdquo; notifications, service updates, and receipts) <strong>and occasional promotional
+                        offers and discounts</strong>. Consent is <strong>not</strong> a condition of purchase.
+                        Message frequency varies. Message and data rates may apply. Reply <strong>STOP</strong> to
+                        opt out or <strong>HELP</strong> for help. See our
+                        <a href="/privacy-policy" target="_blank" rel="noopener">Privacy Policy</a>
+                        and <a href="/sms-terms" target="_blank" rel="noopener">SMS Terms</a>.</span>
+                    </label>
+                    <p class="sms-consent-note">You can still get a quote without agreeing to texts &mdash; just
+                      leave this unchecked and we&rsquo;ll call or email you instead.</p>
                   </div>
                   <button type="submit" class="form-submit" style="background: var(--color-accent);">Send My Free Quote
                     Request &rarr;</button>

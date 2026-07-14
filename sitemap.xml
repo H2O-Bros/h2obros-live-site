@@ -35,6 +35,10 @@
   <loc>https://h2obros.com/privacy-policy</loc>
   <priority>0.30</priority>
 </url>
+<url>
+  <loc>https://h2obros.com/sms-terms</loc>
+  <priority>0.30</priority>
+</url>
 
 
 </urlset>
