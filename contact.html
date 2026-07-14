@@ -192,90 +192,8 @@
               <p class="contact-form-sub">We'll review your request and get back to you fast with a clear, no-pressure
                 quote.</p>
 
-              <form class="js-quote-form" aria-label="Quote request form" novalidate>
-                <div class="form-fields">
-                  <div class="form-grid" style="margin-bottom:.875rem;">
-                    <div class="form-group">
-                      <label class="form-label form-label--dark" for="ct-name">Full Name *</label>
-                      <input class="form-input form-input--light" type="text" id="ct-name" name="name"
-                        placeholder="Jane Smith" required autocomplete="name">
-                    </div>
-                    <div class="form-group">
-                      <label class="form-label form-label--dark" for="ct-phone">Phone Number *</label>
-                      <input class="form-input form-input--light" type="tel" id="ct-phone" name="phone"
-                        placeholder="(555) 000-0000" required autocomplete="tel">
-                    </div>
-                    <div class="form-group">
-                      <label class="form-label form-label--dark" for="ct-email">Email Address</label>
-                      <input class="form-input form-input--light" type="email" id="ct-email" name="email"
-                        placeholder="jane@email.com" autocomplete="email">
-                    </div>
-                    <div class="form-group">
-                      <label class="form-label form-label--dark" for="ct-address">Address / Zip Code *</label>
-                      <input class="form-input form-input--light" type="text" id="ct-address" name="address"
-                        placeholder="Street address or zip code" required autocomplete="postal-code">
-                    </div>
-                    <div class="form-group">
-                      <label class="form-label form-label--dark" for="ct-service">Service Needed *</label>
-                      <select class="form-input form-input--light" id="ct-service" name="service" required>
-                        <option value="" disabled selected>Select a service…</option>
-                        <option>Pressure Washing</option>
-                        <option>House Washing</option>
-                        <option>Roof Washing</option>
-                        <option>Gutter Cleaning</option>
-                        <option>Exterior Window Cleaning</option>
-                        <option>Interior Window Cleaning</option>
-                        <option>Screen Cleaning</option>
-                        <option>Solar Panel Cleaning</option>
-                        <option>Multiple Services</option>
-                        <option>Not Sure — Need Advice</option>
-                      </select>
-                    </div>
-                    <div class="form-group">
-                      <label class="form-label form-label--dark" for="ct-contact">Preferred Contact Method</label>
-                      <select class="form-input form-input--light" id="ct-contact" name="preferred_contact">
-                        <option value="" disabled selected>How should we reach you?</option>
-                        <option>Phone Call</option>
-                        <option>Text Message</option>
-                        <option>Email</option>
-                      </select>
-                    </div>
-                    <div class="form-group span-2">
-                      <label class="form-label form-label--dark" for="ct-message">Message / Project Details</label>
-                      <textarea class="form-input form-input--light" id="ct-message" name="message" rows="5"
-                        placeholder="Tell us about your property, what surfaces need cleaning, any special considerations…"></textarea>
-                    </div>
-                  </div>
-                  <div class="sms-consent">
-                    <label class="sms-consent-label" for="ct-sms-consent">
-                      <input type="checkbox" id="ct-sms-consent" name="sms_consent" value="Yes — agreed to receive texts">
-                      <span>I agree to receive text messages from <strong>H2O Bros, LLC</strong>, including service
-                        messages about my quote and job (appointment confirmations and reminders, &ldquo;on my
-                        way&rdquo; notifications, service updates, and receipts) <strong>and occasional promotional
-                        offers and discounts</strong>. Consent is <strong>not</strong> a condition of purchase.
-                        Message frequency varies. Message and data rates may apply. Reply <strong>STOP</strong> to
-                        opt out or <strong>HELP</strong> for help. See our
-                        <a href="/privacy-policy" target="_blank" rel="noopener">Privacy Policy</a>
-                        and <a href="/sms-terms" target="_blank" rel="noopener">SMS Terms</a>.</span>
-                    </label>
-                    <p class="sms-consent-note">You can still get a quote without agreeing to texts &mdash; just
-                      leave this unchecked and we&rsquo;ll call or email you instead.</p>
-                  </div>
-                  <button type="submit" class="form-submit" style="background: var(--color-accent);">Send My Free Quote
-                    Request &rarr;</button>
-                  <p class="text-sm text-muted mt-2" style="text-align:center;">No spam. No obligations. Just a quick
-                    response and a fair price.</p>
-                </div>
-                <div class="form-success"
-                  style="border-color:rgba(27,111,238,.3); background:var(--color-accent-light); color:var(--color-accent);"
-                  role="alert">
-                  <div class="form-success-icon" style="color:var(--color-accent);">✓</div>
-                  <h3 style="color:var(--color-text);">Thanks! We'll reach out ASAP.</h3>
-                  <p style="color:var(--color-text-muted);">We typically respond within a few hours during business
-                    hours. If it's urgent, call us directly at <a href="tel:+18642567125"
-                      style="color:var(--color-accent);font-weight:600;">(864) 256-7125</a>.</p>
-                </div>
-              </form>
+              <div id="knock77-quote" class="knock77-quote"></div>
+              <script src="https://knock77.com/embed.js" data-cid="h2obros" data-mode="inline" data-target="#knock77-quote" data-src="web-contact" data-co="H2O Bros"></script>
 
             </div>
           </div>
@@ -530,47 +448,6 @@
       <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z" />
     </svg></button>
   <script src="js/main.js" defer></script>
-  <script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbxmlKCCqoAeDX2bgiflKbfuSj5JR8yOMGOnIBgWIq0F7n6A7taSClejvQ50sw6vmAv7zg/exec';
-  
-    const form = document.querySelector('.js-quote-form');
-    const formFields = document.querySelector('.form-fields');
-    const successMessage = document.querySelector('.form-success');
-    const submitButton = document.querySelector('.form-submit');
-  
-    if (form && formFields && successMessage && submitButton) {
-      const originalSubmitHTML = submitButton.innerHTML;
-      successMessage.style.display = 'none';
-  
-      form.addEventListener('submit', (e) => {
-        e.preventDefault();
-  
-        if (!form.checkValidity()) {
-          form.reportValidity();
-          return;
-        }
-  
-        submitButton.disabled = true;
-        submitButton.innerHTML = 'Sending...';
-  
-        // Revert to plain FormData. Google Apps Script natively handles this 
-        // perfectly without needing manual headers or no-cors hacks.
-        const requestBody = new FormData(form);
-  
-        fetch(scriptURL, { method: 'POST', body: requestBody })
-          .then(response => {
-            formFields.style.display = 'none';
-            successMessage.style.display = 'block';
-          })
-          .catch(error => {
-            console.error('Error!', error.message);
-            submitButton.disabled = false;
-            submitButton.innerHTML = originalSubmitHTML;
-            alert('There was an error submitting your request. Please try again.');
-          });
-      });
-    }
-  </script>
 </body>
 
 </html>

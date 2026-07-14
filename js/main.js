@@ -57,26 +57,10 @@
     });
   });
 
-  /* ---- Quote form submission ---- */
-  document.querySelectorAll('.js-quote-form').forEach(form => {
-    form.addEventListener('submit', e => {
-      e.preventDefault();
-
-      const submit  = form.querySelector('.form-submit');
-      const success = form.querySelector('.form-success');
-      const fields  = form.querySelector('.form-fields');
-
-      // Simulate sending
-      if (submit) { submit.disabled = true; submit.textContent = 'Sending…'; }
-
-      setTimeout(() => {
-        if (fields)  fields.style.display = 'none';
-        if (success) success.classList.add('show');
-        // TODO: replace with real form submission (Formspree, Netlify Forms, EmailJS, etc.)
-        // Example Formspree: fetch('https://formspree.io/f/YOUR_ID', { method:'POST', body: new FormData(form) })
-      }, 800);
-    });
-  });
+  /* ---- Quote capture ----
+     Quote forms are the hosted Knock77 lead widget (https://knock77.com/embed.js),
+     embedded inline on each page. Submissions land in the H2O Bros Knock77 Leads
+     hub, so no in-page form-submit handling is needed here. */
 
   /* ---- Highlight active nav link ---- */
   const page = location.pathname.split('/').pop() || 'index.html';
