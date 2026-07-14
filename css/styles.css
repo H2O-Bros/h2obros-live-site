@@ -896,6 +896,10 @@ body.menu-open .alert-bar {
   background-image: url('../images/guttercleaning.avif');
 }
 
+.service-hero--screen {
+  background-image: url('../images/windowcleaninghero.avif');
+}
+
 .service-hero::before {
   content: '';
   position: absolute;
@@ -1289,6 +1293,50 @@ body.menu-open .alert-bar {
 .service-card--roof .service-card-link,
 .service-card--solar .service-card-link,
 .service-card--gutter .service-card-link {
+  color: #93C5FD;
+  position: relative;
+  z-index: 1;
+}
+
+/* Screen cleaning card (added with the 8-service lineup) */
+.service-card--screen {
+  background-image: url('../images/windowcleaninghero.avif');
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.service-card--screen::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 22, 56, .65);
+  border-radius: inherit;
+  z-index: 0;
+}
+
+.service-card--screen .service-card-icon {
+  background: rgba(255, 255, 255, .2);
+  position: relative;
+  z-index: 1;
+}
+
+.service-card--screen .service-card-icon svg {
+  fill: white;
+}
+
+.service-card--screen .service-card-title,
+.service-card--screen .service-card-desc {
+  color: white;
+  position: relative;
+  z-index: 1;
+}
+
+.service-card--screen .service-card-desc {
+  color: rgba(255, 255, 255, .92);
+}
+
+.service-card--screen .service-card-link {
   color: #93C5FD;
   position: relative;
   z-index: 1;
