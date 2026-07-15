@@ -2867,3 +2867,69 @@ body.menu-open .alert-bar {
   background: var(--color-accent-light);
 }
 
+
+/* ===== Sticky mobile call / quote bar ===== */
+.mobile-cta-bar { display: none; }
+
+@media (max-width: 768px) {
+  .mobile-cta-bar {
+    position: fixed;
+    left: 0; right: 0; bottom: 0;
+    z-index: 150;
+    display: flex;
+    gap: .625rem;
+    padding: .625rem .75rem calc(.625rem + env(safe-area-inset-bottom, 0px));
+    background: var(--color-surface);
+    border-top: 1px solid var(--color-border);
+    box-shadow: 0 -6px 20px rgba(0, 0, 0, .38);
+  }
+  .mcta {
+    flex: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .4rem;
+    padding: .85rem 1rem;
+    border-radius: var(--radius-full);
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1;
+  }
+  .mcta svg { width: 1.15rem; height: 1.15rem; fill: currentColor; flex-shrink: 0; }
+  .mcta--call {
+    background: transparent;
+    color: var(--color-text);
+    border: 1.5px solid var(--color-border);
+  }
+  .mcta--quote {
+    flex: 1.4;
+    background: var(--color-cta);
+    color: var(--color-primary);
+  }
+  body { padding-bottom: 70px; }
+  body.menu-open .mobile-cta-bar { display: none; }
+  .scroll-top { bottom: calc(70px + 1rem); }
+}
+
+/* ===== Tips / articles ===== */
+.article-body p, .article-body li { color: var(--color-text-muted); line-height: 1.75; margin-bottom: 1rem; }
+.article-body h2 { font-size: 1.35rem; margin: 1.9rem 0 .6rem; color: var(--color-text); }
+.article-body ul { padding-left: 1.25rem; margin-bottom: 1rem; }
+.article-body li { margin-bottom: .4rem; }
+.article-body a { color: var(--color-cta); font-weight: 600; }
+.article-body strong { color: var(--color-text); }
+
+.tips-grid { display: grid; grid-template-columns: 1fr; gap: 1.25rem; }
+@media (min-width: 700px) { .tips-grid { grid-template-columns: repeat(2, 1fr); } }
+.tip-card {
+  display: block;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  transition: transform .2s ease, border-color .2s ease;
+}
+.tip-card:hover { border-color: var(--color-cta); transform: translateY(-3px); }
+.tip-card-title { font-size: 1.1rem; font-weight: 700; color: var(--color-text); margin-bottom: .5rem; }
+.tip-card-desc { font-size: .9rem; color: var(--color-text-muted); line-height: 1.6; margin-bottom: .75rem; }
+.tip-card-link { color: var(--color-cta); font-weight: 700; font-size: .875rem; }

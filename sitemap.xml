@@ -55,6 +55,44 @@
   <loc>https://h2obros.com/sms-terms</loc>
   <priority>0.30</priority>
 </url>
-
-
+<url>
+  <loc>https://h2obros.com/greer</loc>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://h2obros.com/simpsonville</loc>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://h2obros.com/taylors</loc>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://h2obros.com/mauldin</loc>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://h2obros.com/travelers-rest</loc>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://h2obros.com/fountain-inn</loc>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://h2obros.com/tips</loc>
+  <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://h2obros.com/how-often-to-clean-gutters</loc>
+  <priority>0.55</priority>
+</url>
+<url>
+  <loc>https://h2obros.com/soft-wash-vs-pressure-wash</loc>
+  <priority>0.55</priority>
+</url>
+<url>
+  <loc>https://h2obros.com/black-streaks-on-roof</loc>
+  <priority>0.55</priority>
+</url>
 </urlset>
