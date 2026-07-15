@@ -1,6 +1,13 @@
 {
-  "updated": null,
-  "rating": null,
-  "total": null,
-  "reviews": []
+  "updated": "2026-07-15",
+  "rating": 5.0,
+  "total": 41,
+  "reviews": [
+    { "author": "Denise Vaughn", "rating": 5, "text": "H2O Bros did a great job cleaning my windows for a very reasonable price. I would definitely recommend them if you need to have your windows cleaned!", "when": "2 months ago" },
+    { "author": "Peter James", "rating": 5, "text": "Great experience with this company. They took care of my issue promptly. Gavin was extremely professional, detailed, and went above and beyond to make sure the work was completed successfully. Five stars!", "when": "a month ago" },
+    { "author": "Ray Durgin", "rating": 5, "text": "Very happy with H2O Bros cleaning of our home windows and garage doors. Also the sun windows in the roof. They are able to clean two-story windows easily, and reviewing the results showed consistent, clean windows.", "when": "a month ago" },
+    { "author": "Andrew Jarvis", "rating": 5, "text": "Great service! Very professional, polite and hardworking as well as fair priced! 10/10 would recommend!!", "when": "" },
+    { "author": "Pam", "rating": 5, "text": "These young men were amazing! Very polite, professional, and more than capable. Our windows and screens look great, and they arrived right on time.", "when": "" },
+    { "author": "Brandi Richardson", "rating": 5, "text": "Braydon and Isaac washed the windows at two of my Airbnbs, they were on time, thorough, and did an excellent job for a fair price.", "when": "" }
+  ]
 }
