@@ -9,16 +9,17 @@
   --color-primary-light: #132040;
   --color-accent: #1B6FEE;
   --color-accent-dark: #1457CC;
-  --color-accent-light: #EFF6FF;
+  --color-accent-light: #16233F;
   --color-cta: #40C0F0;
   --color-cta-hover: #22B0E8;
   --color-success: #10B981;
-  --color-text: #111827;
-  --color-text-muted: #6B7280;
-  --color-text-light: #9CA3AF;
-  --color-bg: #FFFFFF;
-  --color-bg-light: #F9FAFB;
-  --color-border: #E5E7EB;
+  --color-text: #E7ECF5;
+  --color-text-muted: #9DABC2;
+  --color-text-light: #7C8AA4;
+  --color-bg: #0B1220;
+  --color-surface: #131E33;
+  --color-bg-light: #0F1A2E;
+  --color-border: #26324A;
   --color-star: #F59E0B;
 
   --font-main: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -256,8 +257,8 @@ textarea {
 
 .btn-outline-dark {
   background: transparent;
-  color: var(--color-primary);
-  border-color: var(--color-primary);
+  color: var(--color-text);
+  border-color: var(--color-border);
 }
 
 .btn-outline-dark:hover {
@@ -329,7 +330,7 @@ body.menu-open .alert-bar {
 /* Home + service pages: white navbar */
 .page-home .site-header,
 .page-white-nav .site-header {
-  background: white;
+  background: var(--color-surface);
 }
 
 .page-home .site-header.scrolled,
@@ -341,7 +342,7 @@ body.menu-open .alert-bar {
 .page-home .nav-dropdown-trigger,
 .page-white-nav .nav-link,
 .page-white-nav .nav-dropdown-trigger {
-  color: var(--color-primary);
+  color: var(--color-text);
 }
 
 .page-home .nav-link:hover,
@@ -350,13 +351,13 @@ body.menu-open .alert-bar {
 .page-white-nav .nav-link:hover,
 .page-white-nav .nav-link.active,
 .page-white-nav .nav-dropdown-trigger:hover {
-  color: var(--color-primary);
-  background: rgba(0, 0, 0, .06);
+  color: var(--color-text);
+  background: rgba(255, 255, 255, .08);
 }
 
 .page-home .mobile-toggle span,
 .page-white-nav .mobile-toggle span {
-  background: var(--color-primary);
+  background: var(--color-text);
 }
 
 /* Nav bar: full-width wrapper, inner max 1536px */
@@ -540,7 +541,7 @@ body.menu-open .alert-bar {
   top: calc(100% + .375rem);
   left: 0;
   min-width: 230px;
-  background: white;
+  background: var(--color-surface);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-xl);
   padding: .5rem;
@@ -641,7 +642,7 @@ body.menu-open .alert-bar {
 .mobile-toggle span {
   display: block;
   height: 2px;
-  background: white;
+  background: var(--color-surface);
   border-radius: 2px;
   transition: all var(--transition-slow);
   transform-origin: center;
@@ -932,7 +933,7 @@ body.menu-open .alert-bar {
   left: 0;
   right: 0;
   height: 80px;
-  background: white;
+  background: var(--color-bg);
   clip-path: ellipse(55% 100% at 50% 100%);
 }
 
@@ -1159,7 +1160,7 @@ body.menu-open .alert-bar {
 }
 
 .service-card {
-  background: white;
+  background: var(--color-surface);
   border-radius: var(--radius-lg);
   padding: 2rem;
   border: 1px solid var(--color-border);
@@ -1424,7 +1425,7 @@ body.menu-open .alert-bar {
 }
 
 .plan-card {
-  background: #FFFFFF;
+  background: var(--color-surface);
   border-radius: 20px;
   border: 1px solid var(--color-border);
   box-shadow: 0 18px 40px rgba(15, 23, 42, .07);
@@ -1469,7 +1470,7 @@ body.menu-open .alert-bar {
 .plan-title {
   font-size: 1.25rem;
   font-weight: 800;
-  color: var(--color-primary);
+  color: var(--color-text);
   margin-bottom: .35rem;
 }
 
@@ -1610,7 +1611,7 @@ body.menu-open .alert-bar {
 }
 
 .testimonial-card {
-  background: white;
+  background: var(--color-surface);
   border-radius: var(--radius-lg);
   padding: 1.75rem;
   border: 1px solid var(--color-border);
@@ -1960,7 +1961,7 @@ body.menu-open .alert-bar {
 }
 
 .form-input--light {
-  background: white;
+  background: var(--color-surface);
   border-color: var(--color-border);
   color: var(--color-text);
 }
@@ -1971,11 +1972,11 @@ body.menu-open .alert-bar {
 
 .form-input--light:focus {
   border-color: var(--color-accent);
-  background: white;
+  background: var(--color-surface);
 }
 
 .form-input--light option {
-  background: white;
+  background: var(--color-surface);
   color: var(--color-text);
 }
 
@@ -2234,7 +2235,7 @@ body.menu-open .alert-bar {
   font-size: .9375rem;
   font-weight: 600;
   color: var(--color-text);
-  background: white;
+  background: var(--color-surface);
   transition: background var(--transition);
   cursor: pointer;
 }
@@ -2261,7 +2262,7 @@ body.menu-open .alert-bar {
   font-size: .9375rem;
   color: var(--color-text-muted);
   line-height: 1.75;
-  background: white;
+  background: var(--color-surface);
 }
 
 .faq-item.open .faq-answer {
@@ -2775,7 +2776,7 @@ body.menu-open .alert-bar {
   left: 0;
   right: 0;
   height: 80px;
-  background: white;
+  background: var(--color-bg);
   clip-path: ellipse(55% 100% at 50% 100%);
 }
 
@@ -2800,7 +2801,7 @@ body.menu-open .alert-bar {
 }
 /* ===== Why H2O Bros (trust band) ===== */
 .why-section {
-  background: linear-gradient(180deg, #f8fafc 0%, #eef4fb 100%);
+  background: linear-gradient(180deg, var(--color-bg-light) 0%, var(--color-surface) 100%);
 }
 .why-grid {
   display: grid;
@@ -2814,7 +2815,7 @@ body.menu-open .alert-bar {
   .why-grid { grid-template-columns: repeat(4, 1fr); }
 }
 .why-item {
-  background: #fff;
+  background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   padding: 1.75rem 1.5rem;
@@ -2873,3 +2874,6 @@ body.menu-open .alert-bar {
   color: var(--color-accent);
   background: var(--color-accent-light);
 }
+
+/* dark header mark badge */
+.site-header .logo-img { border-radius: 12px; }
