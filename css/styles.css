@@ -2798,3 +2798,78 @@ body.menu-open .alert-bar {
   margin: 0 auto;
   line-height: 1.7;
 }
+/* ===== Why H2O Bros (trust band) ===== */
+.why-section {
+  background: linear-gradient(180deg, #f8fafc 0%, #eef4fb 100%);
+}
+.why-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+@media (min-width: 640px) {
+  .why-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 1024px) {
+  .why-grid { grid-template-columns: repeat(4, 1fr); }
+}
+.why-item {
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem 1.5rem;
+  text-align: center;
+  box-shadow: 0 1px 2px rgba(10, 22, 40, .04);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.why-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(10, 22, 40, .10);
+}
+.why-icon {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 1rem;
+  border-radius: 50%;
+  background: var(--color-accent-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.why-icon svg { width: 28px; height: 28px; fill: var(--color-accent); }
+.why-item-title { font-size: 1.05rem; font-weight: 700; margin-bottom: .4rem; color: var(--color-text); }
+.why-item-text { font-size: .9rem; line-height: 1.6; color: var(--color-text-muted); }
+
+/* ===== Related services (service pages) ===== */
+.related-services {
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--color-border);
+}
+.related-services-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--color-text);
+}
+.related-services-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .625rem;
+}
+.related-service-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: .5rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  font-size: .875rem;
+  font-weight: 600;
+  color: var(--color-text);
+  transition: all var(--transition);
+}
+.related-service-pill:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  background: var(--color-accent-light);
+}
