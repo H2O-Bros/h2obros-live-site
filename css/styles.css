@@ -223,25 +223,21 @@ textarea {
 .btn-primary {
   background: var(--color-cta);
   color: var(--color-primary);
-  box-shadow: 0 4px 14px rgba(64, 192, 240, .38);
 }
 
 .btn-primary:hover {
   background: var(--color-cta-hover);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(64, 192, 240, .46);
 }
 
 .btn-secondary {
   background: var(--color-accent);
   color: white;
-  box-shadow: 0 4px 14px rgba(27, 111, 238, .3);
 }
 
 .btn-secondary:hover {
   background: var(--color-accent-dark);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(27, 111, 238, .4);
 }
 
 .btn-outline {
@@ -421,19 +417,17 @@ body.menu-open .alert-bar {
 
 /* Brand wordmark image (the "H2O BROS" lettering) */
 .logo-wordmark-img {
-  height: 40px;
+  height: 48px;
   width: auto;
   display: block;
 }
 
 @media (max-width: 768px) {
-  .site-header .logo-img, .nav-bar .logo-img { height: 46px; }
-  .logo-wordmark-img { height: 36px; }
+  .logo-wordmark-img { height: 42px; }
 }
 
 @media (max-width: 400px) {
-  .site-header .logo-img, .nav-bar .logo-img { height: 40px; }
-  .logo-wordmark-img { height: 32px; }
+  .logo-wordmark-img { height: 36px; }
 }
 
 .logo-mark {
@@ -1040,7 +1034,6 @@ body.menu-open .alert-bar {
 
 .stat-number-accent {
   color: var(--color-cta);
-  text-shadow: 0 0 12px rgba(64, 192, 240, .5);
 }
 
 .stat-label {
@@ -1443,7 +1436,7 @@ body.menu-open .alert-bar {
 
 .plan-card--highlight {
   border-color: var(--color-accent);
-  box-shadow: 0 22px 50px rgba(27, 111, 238, .18);
+  box-shadow: 0 18px 44px rgba(0, 0, 0, .38);
 }
 
 .plan-badge {
@@ -1996,7 +1989,6 @@ body.menu-open .alert-bar {
 .form-submit:hover {
   background: var(--color-cta-hover);
   transform: translateY(-1px);
-  box-shadow: 0 4px 14px rgba(64, 192, 240, .4);
 }
 
 .form-success {
