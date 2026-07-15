@@ -418,21 +418,21 @@ body.menu-open .alert-bar {
   width: auto;
 }
 
-/* Brand wordmark image (the "H2O BROS" lettering), sized to match the mark */
+/* Brand wordmark image (the "H2O BROS" lettering) */
 .logo-wordmark-img {
-  height: 52px;
+  height: 40px;
   width: auto;
   display: block;
 }
 
 @media (max-width: 768px) {
-  .site-header .logo-img, .nav-bar .logo-img { height: 44px; }
-  .logo-wordmark-img { height: 44px; }
+  .site-header .logo-img, .nav-bar .logo-img { height: 46px; }
+  .logo-wordmark-img { height: 36px; }
 }
 
-@media (max-width: 480px) {
-  .site-header .logo-img, .nav-bar .logo-img { height: 38px; }
-  .logo-wordmark-img { height: 38px; }
+@media (max-width: 400px) {
+  .site-header .logo-img, .nav-bar .logo-img { height: 40px; }
+  .logo-wordmark-img { height: 32px; }
 }
 
 .logo-mark {
