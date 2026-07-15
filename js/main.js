@@ -114,6 +114,40 @@
     '<a href="/contact" class="mcta mcta--quote" data-cta="quote">Get a Free Quote</a>';
   document.body.appendChild(bar);
 
+  /* ---- Live Google reviews ----
+     A GitHub Action (scripts/fetch-reviews.js) refreshes /reviews.json daily.
+     If it has reviews, we render them in place of the static fallback cards. */
+  (function loadReviews() {
+    const grid = document.querySelector('.testimonials-grid');
+    if (!grid) return;
+    const esc = s => String(s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    const stars = n => '★'.repeat(Math.round(n)) + '☆'.repeat(Math.max(0, 5 - Math.round(n)));
+    const colors = ['#1B6FEE', '#10B981', '#8B5CF6', '#EC4899', '#F59E0B', '#0EA5E9'];
+    fetch('/reviews.json', { cache: 'no-cache' })
+      .then(r => r.ok ? r.json() : null)
+      .then(data => {
+        if (!data || !Array.isArray(data.reviews) || !data.reviews.length) return; // keep static fallback
+        grid.innerHTML = data.reviews.map((rv, i) => {
+          const initials = (rv.author || '').split(/\s+/).map(w => w[0]).join('').slice(0, 2).toUpperCase() || '★';
+          return '<div class="testimonial-card">' +
+            '<div class="stars" aria-label="' + rv.rating + ' out of 5 stars">' + stars(rv.rating) + '</div>' +
+            '<p class="testimonial-text">"' + esc(rv.text) + '"</p>' +
+            '<div class="testimonial-author">' +
+              '<div class="author-avatar" style="background:' + colors[i % colors.length] + ';" aria-hidden="true">' + esc(initials) + '</div>' +
+              '<div><span class="author-name">' + esc(rv.author) + '</span>' +
+              '<span class="author-detail">Google Review' + (rv.when ? ' · ' + esc(rv.when) : '') + '</span></div>' +
+            '</div></div>';
+        }).join('');
+        if (data.rating && data.total) {
+          const head = document.querySelector('#reviews-title');
+          const sub = head && head.parentElement.querySelector('.section-subtitle');
+          if (sub) sub.innerHTML = 'Rated <strong>' + data.rating.toFixed(1) + '★</strong> across <strong>' +
+            data.total + '</strong> Google reviews — here’s what your neighbors are saying.';
+        }
+      })
+      .catch(() => {});
+  })();
+
   /* ---- Conversion tracking (Google Analytics events) ---- */
   function track(name, params) {
     if (typeof window.gtag === 'function') window.gtag('event', name, params || {});
