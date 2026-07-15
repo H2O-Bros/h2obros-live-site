@@ -2505,7 +2505,10 @@ body.menu-open .alert-bar {
 }
 
 .site-footer .footer-logo .logo-img {
-  filter: drop-shadow(0 0 10px rgba(255, 255, 255, .55)) drop-shadow(0 0 22px rgba(255, 255, 255, .25));
+  /* Logo art has a white background; round it into a clean tile so it reads
+     intentionally against the dark footer instead of a hard white square. */
+  border-radius: 14px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, .28);
 }
 
 .footer-grid {
