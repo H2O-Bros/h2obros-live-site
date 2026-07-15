@@ -10,8 +10,8 @@
   --color-accent: #1B6FEE;
   --color-accent-dark: #1457CC;
   --color-accent-light: #EFF6FF;
-  --color-cta: #F97316;
-  --color-cta-hover: #EA6C10;
+  --color-cta: #40C0F0;
+  --color-cta-hover: #22B0E8;
   --color-success: #10B981;
   --color-text: #111827;
   --color-text-muted: #6B7280;
@@ -221,14 +221,14 @@ textarea {
 
 .btn-primary {
   background: var(--color-cta);
-  color: white;
-  box-shadow: 0 4px 14px rgba(249, 115, 22, .38);
+  color: var(--color-primary);
+  box-shadow: 0 4px 14px rgba(64, 192, 240, .38);
 }
 
 .btn-primary:hover {
   background: var(--color-cta-hover);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(249, 115, 22, .46);
+  box-shadow: 0 6px 20px rgba(64, 192, 240, .46);
 }
 
 .btn-secondary {
@@ -1039,7 +1039,7 @@ body.menu-open .alert-bar {
 
 .stat-number-accent {
   color: var(--color-cta);
-  text-shadow: 0 0 12px rgba(249, 115, 22, .5);
+  text-shadow: 0 0 12px rgba(64, 192, 240, .5);
 }
 
 .stat-label {
@@ -1983,7 +1983,7 @@ body.menu-open .alert-bar {
   width: 100%;
   padding: 1rem;
   background: var(--color-cta);
-  color: white;
+  color: var(--color-primary);
   font-size: 1rem;
   font-weight: 700;
   border: none;
@@ -1995,7 +1995,7 @@ body.menu-open .alert-bar {
 .form-submit:hover {
   background: var(--color-cta-hover);
   transform: translateY(-1px);
-  box-shadow: 0 4px 14px rgba(249, 115, 22, .4);
+  box-shadow: 0 4px 14px rgba(64, 192, 240, .4);
 }
 
 .form-success {
