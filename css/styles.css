@@ -2875,5 +2875,3 @@ body.menu-open .alert-bar {
   background: var(--color-accent-light);
 }
 
-/* dark header mark badge */
-.site-header .logo-img { border-radius: 12px; }
