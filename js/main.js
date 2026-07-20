@@ -58,9 +58,8 @@
   });
 
   /* ---- Quote capture ----
-     Quote forms are the hosted Knock77 lead widget (https://knock77.com/embed.js),
-     embedded inline on each page. Submissions land in the H2O Bros Knock77 Leads
-     hub, so no in-page form-submit handling is needed here. */
+     Quote CTAs link to the hosted Rotor form (forms.getrotor.com/f/13xi9igt),
+     which opens in a new tab. No in-page form handling needed. */
 
   /* ---- Highlight active nav link ---- */
   const page = location.pathname.split('/').pop() || 'index.html';
@@ -152,13 +151,6 @@
   function track(name, params) {
     if (typeof window.gtag === 'function') window.gtag('event', name, params || {});
   }
-  // Lead submitted: the Knock77 form posts {knock77:'success'} to the parent on submit
-  window.addEventListener('message', function (ev) {
-    const d = ev && ev.data;
-    if (d && typeof d === 'object' && d.knock77 === 'success') {
-      track('generate_lead', { method: 'knock77_form', page: location.pathname });
-    }
-  });
   // Phone intent: any tap on a tel: link
   document.querySelectorAll('a[href^="tel:"]').forEach(function (a) {
     a.addEventListener('click', function () {
